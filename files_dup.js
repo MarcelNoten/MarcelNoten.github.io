@@ -1,4 +1,4 @@
 var files_dup =
 [
-    [ "Users", "dir_d522931ffa1371640980b621734a4381.html", "dir_d522931ffa1371640980b621734a4381" ]
+    [ "CoAPSTM32-Interation", "dir_1bf30330f23b435a56c25d767cd8ea7c.html", "dir_1bf30330f23b435a56c25d767cd8ea7c" ]
 ];

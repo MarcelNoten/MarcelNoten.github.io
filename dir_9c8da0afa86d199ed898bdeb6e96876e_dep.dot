@@ -1,0 +1,17 @@
+digraph "CoAPSTM32-Interation/libraries/3rdparty/CoAp" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_7f6f465502135dc2d8e7e68430a90597 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="3rdparty" fontname="Helvetica", fontsize="10", URL="dir_7f6f465502135dc2d8e7e68430a90597.html"]
+  subgraph clusterdir_9c8da0afa86d199ed898bdeb6e96876e {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_9c8da0afa86d199ed898bdeb6e96876e.html"];
+    dir_9c8da0afa86d199ed898bdeb6e96876e [shape=plaintext label="CoAp"];
+    dir_b087f9773daa999c84757c614a9c2052 [shape=box label="doc_pages" color="black" fillcolor="white" style="filled" URL="dir_b087f9773daa999c84757c614a9c2052.html"];
+    dir_86b413838413fb133fb83de9ee10a857 [shape=box label="interface" color="red" fillcolor="white" style="filled" URL="dir_86b413838413fb133fb83de9ee10a857.html"];
+    dir_9f0ebe11dc80c296283f88d19c0403e6 [shape=box label="option-types" color="black" fillcolor="white" style="filled" URL="dir_9f0ebe11dc80c296283f88d19c0403e6.html"];
+  }
+  }
+  dir_9c8da0afa86d199ed898bdeb6e96876e->dir_86b413838413fb133fb83de9ee10a857 [headlabel="5", labeldistance=1.5 headhref="dir_000003_000005.html"];
+  dir_9c8da0afa86d199ed898bdeb6e96876e->dir_9f0ebe11dc80c296283f88d19c0403e6 [headlabel="5", labeldistance=1.5 headhref="dir_000003_000008.html"];
+}

@@ -16,11 +16,6 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(function() { init_search(); });
-/* @license-end */
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -31,23 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Lobaro Coap library
+   &#160;<span id="projectnumber">12-10-2020</span>
    </div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.svg"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Search" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -59,6 +40,16 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -97,6 +88,11 @@ $(document).ready(function(){initNavTree('struct_co_a_p__option.html',''); initR
 <div class="title">CoAP_option Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Coap option.  
+ <a href="struct_co_a_p__option.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="liblobaro__coap_8h_source.html">liblobaro_coap.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for CoAP_option:</div>
 <div class="dyncontent">
@@ -105,21 +101,89 @@ Collaboration diagram for CoAP_option:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a7781ad8a2d1e36815089bc8ac7d7cea8"><td class="memItemLeft" align="right" valign="top"><a id="a7781ad8a2d1e36815089bc8ac7d7cea8"></a>
-struct <a class="el" href="struct_co_a_p__option.html">CoAP_option</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>next</b></td></tr>
-<tr class="separator:a7781ad8a2d1e36815089bc8ac7d7cea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2684380ab148d2c2f3065d6055f645bd"><td class="memItemLeft" align="right" valign="top"><a id="a2684380ab148d2c2f3065d6055f645bd"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Number</b></td></tr>
-<tr class="separator:a2684380ab148d2c2f3065d6055f645bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f089d35ff6917515af884e4872941f4"><td class="memItemLeft" align="right" valign="top"><a id="a4f089d35ff6917515af884e4872941f4"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Length</b></td></tr>
-<tr class="separator:a4f089d35ff6917515af884e4872941f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82a156689eed92e5f48b011ffd3b5445"><td class="memItemLeft" align="right" valign="top"><a id="a82a156689eed92e5f48b011ffd3b5445"></a>
-uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>Value</b></td></tr>
-<tr class="separator:a82a156689eed92e5f48b011ffd3b5445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de97578ac32248b336d9ad62cc6926f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_co_a_p__option.html">CoAP_option</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_co_a_p__option.html#a4de97578ac32248b336d9ad62cc6926f">next</a></td></tr>
+<tr class="memdesc:a4de97578ac32248b336d9ad62cc6926f"><td class="mdescLeft">&#160;</td><td class="mdescRight">4 byte pointer (linked list)  <a href="struct_co_a_p__option.html#a4de97578ac32248b336d9ad62cc6926f">More...</a><br /></td></tr>
+<tr class="separator:a4de97578ac32248b336d9ad62cc6926f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a337cbf25b388f3398d13b7f485e227d6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_co_a_p__option.html#a337cbf25b388f3398d13b7f485e227d6">Number</a></td></tr>
+<tr class="memdesc:a337cbf25b388f3398d13b7f485e227d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">2 byte  <a href="struct_co_a_p__option.html#a337cbf25b388f3398d13b7f485e227d6">More...</a><br /></td></tr>
+<tr class="separator:a337cbf25b388f3398d13b7f485e227d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a930e5a4d8414c0427fe5c636062579db"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_co_a_p__option.html#a930e5a4d8414c0427fe5c636062579db">Length</a></td></tr>
+<tr class="memdesc:a930e5a4d8414c0427fe5c636062579db"><td class="mdescLeft">&#160;</td><td class="mdescRight">2 byte  <a href="struct_co_a_p__option.html#a930e5a4d8414c0427fe5c636062579db">More...</a><br /></td></tr>
+<tr class="separator:a930e5a4d8414c0427fe5c636062579db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23f0d0ec983c23c69ba5e0f61dfac6ab"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_co_a_p__option.html#a23f0d0ec983c23c69ba5e0f61dfac6ab">Value</a></td></tr>
+<tr class="memdesc:a23f0d0ec983c23c69ba5e0f61dfac6ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">4 byte (should be last in struct!)  <a href="struct_co_a_p__option.html#a23f0d0ec983c23c69ba5e0f61dfac6ab">More...</a><br /></td></tr>
+<tr class="separator:a23f0d0ec983c23c69ba5e0f61dfac6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Coap option. </p>
+<p>Struct for the coap option containing the number, lenghts and delta value. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="a930e5a4d8414c0427fe5c636062579db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a930e5a4d8414c0427fe5c636062579db">&#9670;&nbsp;</a></span>Length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>2 byte </p>
+
+</div>
+</div>
+<a id="a4de97578ac32248b336d9ad62cc6926f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4de97578ac32248b336d9ad62cc6926f">&#9670;&nbsp;</a></span>next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_co_a_p__option.html">CoAP_option</a>* next</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>4 byte pointer (linked list) </p>
+
+</div>
+</div>
+<a id="a337cbf25b388f3398d13b7f485e227d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a337cbf25b388f3398d13b7f485e227d6">&#9670;&nbsp;</a></span>Number</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Number</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>2 byte </p>
+
+</div>
+</div>
+<a id="a23f0d0ec983c23c69ba5e0f61dfac6ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f0d0ec983c23c69ba5e0f61dfac6ab">&#9670;&nbsp;</a></span>Value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t* Value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>4 byte (should be last in struct!) </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/MarcelNotenboom/Desktop/Lobaro_doxygen/src/<a class="el" href="liblobaro__coap_8h_source.html">liblobaro_coap.h</a></li>
+<li>CoAPSTM32-Interation/libraries/3rdparty/CoAp/<a class="el" href="liblobaro__coap_8h_source.html">liblobaro_coap.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

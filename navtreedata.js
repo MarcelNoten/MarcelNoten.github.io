@@ -27,17 +27,32 @@ var NAVTREE =
   [ "Lobaro Coap library", "index.html", [
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
-      [ "Data Structure Index", "classes.html", null ]
+      [ "Data Structure Index", "classes.html", null ],
+      [ "Data Fields", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
+      [ "File List", "files.html", "files_dup" ],
+      [ "Globals", "globals.html", [
+        [ "All", "globals.html", "globals_dup" ],
+        [ "Functions", "globals_func.html", "globals_func" ],
+        [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ],
+        [ "Macros", "globals_defs.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"coap__option__observe_8c.html#a07fe443ee98819785fa688e02e73bd6e",
+"liblobaro__coap_8h.html#a43d98a5c4ca18ac5359c6bfea2e74a95abdbbe91a7a7983035d43dd011bb82126"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

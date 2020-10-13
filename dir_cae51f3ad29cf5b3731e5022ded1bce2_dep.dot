@@ -1,0 +1,9 @@
+digraph "CoAPSTM32-Interation/libraries/3rdparty/CoAp/interface/mem" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_86b413838413fb133fb83de9ee10a857 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="interface" fontname="Helvetica", fontsize="10", URL="dir_86b413838413fb133fb83de9ee10a857.html"]
+  dir_cae51f3ad29cf5b3731e5022ded1bce2 [shape=box, label="mem", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_cae51f3ad29cf5b3731e5022ded1bce2.html"];
+  }
+}

@@ -1,0 +1,10 @@
+digraph "CoAPSTM32-Interation" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_1bf30330f23b435a56c25d767cd8ea7c {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_1bf30330f23b435a56c25d767cd8ea7c.html"];
+    dir_1bf30330f23b435a56c25d767cd8ea7c [shape=plaintext label="CoAPSTM32-Interation"];
+    dir_3076aa56358a99db14e0ccd649864700 [shape=box label="libraries" color="red" fillcolor="white" style="filled" URL="dir_3076aa56358a99db14e0ccd649864700.html"];
+  }
+}

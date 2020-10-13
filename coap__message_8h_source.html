@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lobaro Coap library: C:/Users/MarcelNotenboom/Desktop/Lobaro_doxygen/src/coap_message.h Source File</title>
+<title>Lobaro Coap library: CoAPSTM32-Interation/libraries/3rdparty/CoAp/coap_message.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -16,11 +16,6 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(function() { init_search(); });
-/* @license-end */
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -31,23 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Lobaro Coap library
+   &#160;<span id="projectnumber">12-10-2020</span>
    </div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.svg"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Search" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -59,6 +40,16 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -95,36 +86,15 @@ $(document).ready(function(){initNavTree('coap__message_8h_source.html',''); ini
 <div class="title">coap_message.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c)  2015  Dipl.-Ing. Tobias Rohde, http://www.lobaro.com</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * in the Software without restriction, including without limitation the rights</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * copies of the Software, and to permit persons to whom the Software is</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * furnished to do so, subject to the following conditions:</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * The above copyright notice and this permission notice shall be included in</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * all copies or substantial portions of the Software.</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * THE SOFTWARE.</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *******************************************************************************/</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<a href="coap__message_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#ifndef COAP_MESSAGE_H_</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define COAP_MESSAGE_H_</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;coap_options.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;liblobaro_coap.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="coap__options_8h.html">coap_options.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="liblobaro__coap_8h.html">liblobaro_coap.h</a>&quot;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define TOKEN_BYTE(num, token) (((uint8_t*)(&amp;token))[num])</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define TOKEN2STR(token) TOKEN_BYTE(0,token), \</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="coap__message_8h.html#adec0a1812199388a14839afe837e90ee">   29</a></span>&#160;<span class="preprocessor">#define TOKEN_BYTE(num, token) (((uint8_t*)(&amp;token))[num])</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="coap__message_8h.html#acaab32c1c7f3a3a915cd1e6c41584c13">   30</a></span>&#160;<span class="preprocessor">#define TOKEN2STR(token) TOKEN_BYTE(0,token), \</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">        TOKEN_BYTE(1,token), \</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">        TOKEN_BYTE(2,token), \</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">        TOKEN_BYTE(3,token), \</span></div>
@@ -133,53 +103,93 @@ $(document).ready(function(){initNavTree('coap__message_8h_source.html',''); ini
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">        TOKEN_BYTE(6,token), \</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">        TOKEN_BYTE(7,token)</span></div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">bool</span> CoAP_TokenEqual(<a class="code" href="struct_co_a_p___token__t.html">CoAP_Token_t</a> a, <a class="code" href="struct_co_a_p___token__t.html">CoAP_Token_t</a> b);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* CoAP_CreateMessage(CoAP_MessageType_t Type, CoAP_MessageCode_t Code,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        uint16_t MessageID, <span class="keyword">const</span> uint8_t* pPayloadInitialContent, uint16_t PayloadInitialContentLength, uint16_t PayloadMaxSize, <a class="code" href="struct_co_a_p___token__t.html">CoAP_Token_t</a> Token);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;CoAP_Result_t CoAP_ParseMessageFromDatagram(uint8_t* srcArr, uint16_t srcArrLength, <a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>** rxedMsg);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;CoAP_Result_t CoAP_SendMsg(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* Msg, SocketHandle_t socketHandle, <a class="code" href="struct_net_ep__t.html">NetEp_t</a> receiver);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;CoAP_Result_t CoAP_SendEmptyAck(uint16_t MessageID, SocketHandle_t socketHandle, <a class="code" href="struct_net_ep__t.html">NetEp_t</a> receiver);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;CoAP_Result_t CoAP_SendEmptyRST(uint16_t MessageID, SocketHandle_t socketHandle, <a class="code" href="struct_net_ep__t.html">NetEp_t</a> receiver);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;CoAP_Result_t CoAP_SendShortResp(CoAP_MessageType_t Type, CoAP_MessageCode_t Code, uint16_t MessageID, <a class="code" href="struct_co_a_p___token__t.html">CoAP_Token_t</a> token, SocketHandle_t socketHandle, <a class="code" href="struct_net_ep__t.html">NetEp_t</a> receiver);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* CoAP_AllocRespMsg(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* ReqMsg, CoAP_MessageCode_t Code, uint16_t PayloadMaxSize);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;CoAP_Result_t CoAP_free_Message(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>** Msg);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> CoAP_free_MsgPayload(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>** Msg);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">bool</span> CoAP_MsgIsRequest(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* pMsg);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">bool</span> CoAP_MsgIsResponse(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* pMsg);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">bool</span> CoAP_MsgIsOlderThan(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* pMsg, uint32_t timespan);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="coap__message_8h.html#afd5ac613537a9f7b29a2f96f008b1d0e">CoAP_TokenEqual</a>(<a class="code" href="struct_co_a_p___token__t.html">CoAP_Token_t</a> a, <a class="code" href="struct_co_a_p___token__t.html">CoAP_Token_t</a> b);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="coap__interface_8h.html#ac5a3150e28aacab67c7b836fc64bf759">_rom</a> <a class="code" href="coap__message_8h.html#a7b1845ca02fab8afad9406b6258718a1">CoAP_InitToEmptyResetMsg</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* msg);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">void</span> CoAP_PrintMsg(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* msg);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">int</span> CoAP_GetRawSizeOfMessage(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* Msg);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">void</span> CoAP_PrintResultValue(CoAP_Result_t res);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">//note: payload should be set normally by CoAP_SetPayload(...) function, because this function performs</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">//beside setting the payload also the blockwise transfer logic!</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;CoAP_Result_t CoAP_addTextPayload(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* Msg, <span class="keywordtype">char</span>* PayloadStr);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;CoAP_Result_t CoAP_addNewPayloadToMessage(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* Msg, uint8_t* pData, uint16_t size);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">void</span> CoAP_InitIds();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;uint16_t CoAP_GetNextMid();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<a class="code" href="struct_co_a_p___token__t.html">CoAP_Token_t</a> CoAP_GenerateToken();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">const</span> <span class="keywordtype">char</span> *CoAP_CodeName(CoAP_MessageCode_t code);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">bool</span> CoAP_CharIsPrintable(<span class="keywordtype">char</span> c);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keywordtype">char</span> CoAP_CharPrintable(<span class="keywordtype">char</span> c);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* COAP_MESSAGE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* <a class="code" href="coap__message_8h.html#a2f74f25ddf11fbb970178115bf8dfac4">CoAP_CreateMessage</a>(<a class="code" href="liblobaro__coap_8h.html#a613fdfde55805d2cdc402070e95b0169">CoAP_MessageType_t</a> type, <a class="code" href="liblobaro__coap_8h.html#a43d98a5c4ca18ac5359c6bfea2e74a95">CoAP_MessageCode_t</a> code, uint16_t messageID, <a class="code" href="struct_co_a_p___token__t.html">CoAP_Token_t</a> token);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<a class="code" href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a> <a class="code" href="coap__message_8h.html#a4757d9f12b80cefc6a1600c56f6cd630">CoAP_ParseMessageFromDatagram</a>(uint8_t* srcArr, uint16_t srcArrLength, <a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>** rxedMsg);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<a class="code" href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a> <a class="code" href="coap__interface_8h.html#ac5a3150e28aacab67c7b836fc64bf759">_rom</a> <a class="code" href="coap__message_8h.html#a69574c7d25562788e1257e0167236d8c">CoAP_BuildDatagram</a>(uint8_t* destArr, uint16_t* pDestArrSize, <a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* pMsg);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* <a class="code" href="coap__message_8h.html#a28fb603d99c0840894c4d4bb4ca1d562">CoAP_CreateResponseMsg</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* reqMsg, <a class="code" href="liblobaro__coap_8h.html#a43d98a5c4ca18ac5359c6bfea2e74a95">CoAP_MessageCode_t</a> code);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<a class="code" href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a> <a class="code" href="coap__message_8h.html#a3e9c993ddb8116c07e94cb997e07bee3">CoAP_FreeMessage</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* pMsg);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keywordtype">void</span> <a class="code" href="coap__message_8h.html#a10bb7fa0ae089e99e99ac978a2f3e016">CoAP_FreeMsgPayload</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* pMsg);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="coap__message_8h.html#a129a7eaf73de97ea9fe136db24a94ccc">CoAP_MsgIsRequest</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* pMsg);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="coap__message_8h.html#a1ddbc6c5eda5cac6dd24858582e8b57a">CoAP_MsgIsResponse</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* pMsg);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="coap__message_8h.html#a2bb59e81cb61aa6bb6891abd8dfda696">CoAP_MsgIsOlderThan</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* pMsg, uint32_t timespan);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keywordtype">void</span> <a class="code" href="coap__message_8h.html#affba036be922a292f10ad1e8721daa5f">CoAP_PrintMsg</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* msg);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keywordtype">int</span> <a class="code" href="coap__message_8h.html#a816f32c3d8ffc845778cdc3225b5c2ca">CoAP_GetRawSizeOfMessage</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* pMsg);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keywordtype">void</span> <a class="code" href="coap__message_8h.html#a4081fda3171cd04f7530116405294af0">CoAP_PrintResultValue</a>(<a class="code" href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a> res);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<a class="code" href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a> <a class="code" href="coap__message_8h.html#a5046ab257564bd67d77254d8ab2d78c9">CoAP_addTextPayload</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* Msg, <span class="keywordtype">char</span>* PayloadStr);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<a class="code" href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a> <a class="code" href="coap__message_8h.html#aa06a3ba6bc37c88d60cca084d89d13aa">CoAP_addNewPayloadToMessage</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a>* Msg, uint8_t* pData, uint16_t size);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;uint16_t <a class="code" href="coap__message_8h.html#a820447497e4c717c930564476b3f2586">CoAP_GetNextMid</a>();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<a class="code" href="struct_co_a_p___token__t.html">CoAP_Token_t</a> <a class="code" href="coap__message_8h.html#a6a12e9ff0ca0aa6fce76124195466408">CoAP_GenerateToken</a>();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* COAP_MESSAGE_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="astruct_net_ep__t_html"><div class="ttname"><a href="struct_net_ep__t.html">NetEp_t</a></div><div class="ttdef"><b>Definition:</b> liblobaro_coap.h:110</div></div>
-<div class="ttc" id="astruct_co_a_p___token__t_html"><div class="ttname"><a href="struct_co_a_p___token__t.html">CoAP_Token_t</a></div><div class="ttdef"><b>Definition:</b> liblobaro_coap.h:242</div></div>
-<div class="ttc" id="astruct_co_a_p___message__t_html"><div class="ttname"><a href="struct_co_a_p___message__t.html">CoAP_Message_t</a></div><div class="ttdef"><b>Definition:</b> liblobaro_coap.h:250</div></div>
+<div class="ttc" id="acoap__message_8h_html_a2f74f25ddf11fbb970178115bf8dfac4"><div class="ttname"><a href="coap__message_8h.html#a2f74f25ddf11fbb970178115bf8dfac4">CoAP_CreateMessage</a></div><div class="ttdeci">CoAP_Message_t * CoAP_CreateMessage(CoAP_MessageType_t type, CoAP_MessageCode_t code, uint16_t messageID, CoAP_Token_t token)</div><div class="ttdoc">Creates a new coap message.</div><div class="ttdef"><b>Definition:</b> coap_message.c:125</div></div>
+<div class="ttc" id="acoap__options_8h_html"><div class="ttname"><a href="coap__options_8h.html">coap_options.h</a></div></div>
+<div class="ttc" id="acoap__message_8h_html_a816f32c3d8ffc845778cdc3225b5c2ca"><div class="ttname"><a href="coap__message_8h.html#a816f32c3d8ffc845778cdc3225b5c2ca">CoAP_GetRawSizeOfMessage</a></div><div class="ttdeci">int CoAP_GetRawSizeOfMessage(CoAP_Message_t *pMsg)</div><div class="ttdoc">return the total Bytes of the message.</div><div class="ttdef"><b>Definition:</b> coap_message.c:261</div></div>
+<div class="ttc" id="acoap__message_8h_html_a10bb7fa0ae089e99e99ac978a2f3e016"><div class="ttname"><a href="coap__message_8h.html#a10bb7fa0ae089e99e99ac978a2f3e016">CoAP_FreeMsgPayload</a></div><div class="ttdeci">void CoAP_FreeMsgPayload(CoAP_Message_t *pMsg)</div><div class="ttdoc">Free the message payload from the memory.</div><div class="ttdef"><b>Definition:</b> coap_message.c:51</div></div>
+<div class="ttc" id="acoap__message_8h_html_a5046ab257564bd67d77254d8ab2d78c9"><div class="ttname"><a href="coap__message_8h.html#a5046ab257564bd67d77254d8ab2d78c9">CoAP_addTextPayload</a></div><div class="ttdeci">CoAP_Result_t CoAP_addTextPayload(CoAP_Message_t *Msg, char *PayloadStr)</div><div class="ttdoc">Adds a text payload to the coap message.</div><div class="ttdef"><b>Definition:</b> coap_message.c:373</div></div>
+<div class="ttc" id="acoap__message_8h_html_a69574c7d25562788e1257e0167236d8c"><div class="ttname"><a href="coap__message_8h.html#a69574c7d25562788e1257e0167236d8c">CoAP_BuildDatagram</a></div><div class="ttdeci">CoAP_Result_t _rom CoAP_BuildDatagram(uint8_t *destArr, uint16_t *pDestArrSize, CoAP_Message_t *pMsg)</div><div class="ttdoc">Create the CoAP datagram.</div><div class="ttdef"><b>Definition:</b> coap_message.c:280</div></div>
+<div class="ttc" id="acoap__message_8h_html_a3e9c993ddb8116c07e94cb997e07bee3"><div class="ttname"><a href="coap__message_8h.html#a3e9c993ddb8116c07e94cb997e07bee3">CoAP_FreeMessage</a></div><div class="ttdeci">CoAP_Result_t CoAP_FreeMessage(CoAP_Message_t *pMsg)</div><div class="ttdoc">Free the message from the memory.</div><div class="ttdef"><b>Definition:</b> coap_message.c:83</div></div>
+<div class="ttc" id="aliblobaro__coap_8h_html_a43d98a5c4ca18ac5359c6bfea2e74a95"><div class="ttname"><a href="liblobaro__coap_8h.html#a43d98a5c4ca18ac5359c6bfea2e74a95">CoAP_MessageCode_t</a></div><div class="ttdeci">CoAP_MessageCode_t</div><div class="ttdoc">Coap message code.</div><div class="ttdef"><b>Definition:</b> liblobaro_coap.h:297</div></div>
+<div class="ttc" id="acoap__message_8h_html_a820447497e4c717c930564476b3f2586"><div class="ttname"><a href="coap__message_8h.html#a820447497e4c717c930564476b3f2586">CoAP_GetNextMid</a></div><div class="ttdeci">uint16_t CoAP_GetNextMid()</div><div class="ttdoc">Get the next incremented message id.</div><div class="ttdef"><b>Definition:</b> coap_message.c:334</div></div>
+<div class="ttc" id="acoap__message_8h_html_a4081fda3171cd04f7530116405294af0"><div class="ttname"><a href="coap__message_8h.html#a4081fda3171cd04f7530116405294af0">CoAP_PrintResultValue</a></div><div class="ttdeci">void CoAP_PrintResultValue(CoAP_Result_t res)</div><div class="ttdoc">prints out the CoAP_Result_t value.</div><div class="ttdef"><b>Definition:</b> coap_message.c:456</div></div>
+<div class="ttc" id="acoap__message_8h_html_a28fb603d99c0840894c4d4bb4ca1d562"><div class="ttname"><a href="coap__message_8h.html#a28fb603d99c0840894c4d4bb4ca1d562">CoAP_CreateResponseMsg</a></div><div class="ttdeci">CoAP_Message_t * CoAP_CreateResponseMsg(CoAP_Message_t *reqMsg, CoAP_MessageCode_t code)</div><div class="ttdoc">Create a response message.</div><div class="ttdef"><b>Definition:</b> coap_message.c:121</div></div>
+<div class="ttc" id="astruct_co_a_p___token__t_html"><div class="ttname"><a href="struct_co_a_p___token__t.html">CoAP_Token_t</a></div><div class="ttdoc">Coap token.</div><div class="ttdef"><b>Definition:</b> liblobaro_coap.h:333</div></div>
+<div class="ttc" id="aliblobaro__coap_8h_html"><div class="ttname"><a href="liblobaro__coap_8h.html">liblobaro_coap.h</a></div></div>
+<div class="ttc" id="acoap__interface_8h_html_ac5a3150e28aacab67c7b836fc64bf759"><div class="ttname"><a href="coap__interface_8h.html#ac5a3150e28aacab67c7b836fc64bf759">_rom</a></div><div class="ttdeci">#define _rom</div><div class="ttdef"><b>Definition:</b> coap_interface.h:67</div></div>
+<div class="ttc" id="aliblobaro__coap_8h_html_a243112826e1395fb46ae2e1da1baca83"><div class="ttname"><a href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a></div><div class="ttdeci">CoAP_Result_t</div><div class="ttdoc">Result codes for coap actions.</div><div class="ttdef"><b>Definition:</b> liblobaro_coap.h:41</div></div>
+<div class="ttc" id="acoap__message_8h_html_a7b1845ca02fab8afad9406b6258718a1"><div class="ttname"><a href="coap__message_8h.html#a7b1845ca02fab8afad9406b6258718a1">CoAP_InitToEmptyResetMsg</a></div><div class="ttdeci">void _rom CoAP_InitToEmptyResetMsg(CoAP_Message_t *msg)</div><div class="ttdoc">initialise an empty RST message.</div><div class="ttdef"><b>Definition:</b> coap_message.c:26</div></div>
+<div class="ttc" id="aliblobaro__coap_8h_html_a613fdfde55805d2cdc402070e95b0169"><div class="ttname"><a href="liblobaro__coap_8h.html#a613fdfde55805d2cdc402070e95b0169">CoAP_MessageType_t</a></div><div class="ttdeci">CoAP_MessageType_t</div><div class="ttdoc">Coap message type.</div><div class="ttdef"><b>Definition:</b> liblobaro_coap.h:282</div></div>
+<div class="ttc" id="acoap__message_8h_html_a129a7eaf73de97ea9fe136db24a94ccc"><div class="ttname"><a href="coap__message_8h.html#a129a7eaf73de97ea9fe136db24a94ccc">CoAP_MsgIsRequest</a></div><div class="ttdeci">bool CoAP_MsgIsRequest(CoAP_Message_t *pMsg)</div><div class="ttdoc">checks if the message is a request.</div><div class="ttdef"><b>Definition:</b> coap_message.c:61</div></div>
+<div class="ttc" id="acoap__message_8h_html_a4757d9f12b80cefc6a1600c56f6cd630"><div class="ttname"><a href="coap__message_8h.html#a4757d9f12b80cefc6a1600c56f6cd630">CoAP_ParseMessageFromDatagram</a></div><div class="ttdeci">CoAP_Result_t CoAP_ParseMessageFromDatagram(uint8_t *srcArr, uint16_t srcArrLength, CoAP_Message_t **rxedMsg)</div><div class="ttdoc">Parses the coap message from datagram.</div><div class="ttdef"><b>Definition:</b> coap_message.c:147</div></div>
+<div class="ttc" id="acoap__message_8h_html_affba036be922a292f10ad1e8721daa5f"><div class="ttname"><a href="coap__message_8h.html#affba036be922a292f10ad1e8721daa5f">CoAP_PrintMsg</a></div><div class="ttdeci">void CoAP_PrintMsg(CoAP_Message_t *msg)</div><div class="ttdoc">Prints out information regarding the message.</div><div class="ttdef"><b>Definition:</b> coap_message.c:377</div></div>
+<div class="ttc" id="acoap__message_8h_html_a6a12e9ff0ca0aa6fce76124195466408"><div class="ttname"><a href="coap__message_8h.html#a6a12e9ff0ca0aa6fce76124195466408">CoAP_GenerateToken</a></div><div class="ttdeci">CoAP_Token_t CoAP_GenerateToken()</div><div class="ttdoc">Get the next incremented token.</div><div class="ttdef"><b>Definition:</b> coap_message.c:341</div></div>
+<div class="ttc" id="acoap__message_8h_html_afd5ac613537a9f7b29a2f96f008b1d0e"><div class="ttname"><a href="coap__message_8h.html#afd5ac613537a9f7b29a2f96f008b1d0e">CoAP_TokenEqual</a></div><div class="ttdeci">bool CoAP_TokenEqual(CoAP_Token_t a, CoAP_Token_t b)</div><div class="ttdoc">Token equal.</div><div class="ttdef"><b>Definition:</b> coap_message.c:39</div></div>
+<div class="ttc" id="acoap__message_8h_html_aa06a3ba6bc37c88d60cca084d89d13aa"><div class="ttname"><a href="coap__message_8h.html#aa06a3ba6bc37c88d60cca084d89d13aa">CoAP_addNewPayloadToMessage</a></div><div class="ttdeci">CoAP_Result_t CoAP_addNewPayloadToMessage(CoAP_Message_t *Msg, uint8_t *pData, uint16_t size)</div><div class="ttdoc">Adds a payload to the coap message.</div><div class="ttdef"><b>Definition:</b> coap_message.c:348</div></div>
+<div class="ttc" id="astruct_co_a_p___message__t_html"><div class="ttname"><a href="struct_co_a_p___message__t.html">CoAP_Message_t</a></div><div class="ttdoc">Coap message.</div><div class="ttdef"><b>Definition:</b> liblobaro_coap.h:351</div></div>
+<div class="ttc" id="acoap__message_8h_html_a1ddbc6c5eda5cac6dd24858582e8b57a"><div class="ttname"><a href="coap__message_8h.html#a1ddbc6c5eda5cac6dd24858582e8b57a">CoAP_MsgIsResponse</a></div><div class="ttdeci">bool CoAP_MsgIsResponse(CoAP_Message_t *pMsg)</div><div class="ttdoc">checks if the message is a response.</div><div class="ttdef"><b>Definition:</b> coap_message.c:68</div></div>
+<div class="ttc" id="acoap__message_8h_html_a2bb59e81cb61aa6bb6891abd8dfda696"><div class="ttname"><a href="coap__message_8h.html#a2bb59e81cb61aa6bb6891abd8dfda696">CoAP_MsgIsOlderThan</a></div><div class="ttdeci">bool CoAP_MsgIsOlderThan(CoAP_Message_t *pMsg, uint32_t timespan)</div><div class="ttdoc">checks if the message age is older then the given timespan.</div><div class="ttdef"><b>Definition:</b> coap_message.c:75</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_316d6101d431efdd778ad14d21f8ad87.html">MarcelNotenboom</a></li><li class="navelem"><a class="el" href="dir_4c7f952422c2a6aecdbb987f1735c77d.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_3e1dc777a41a29db4831ce2a8fdea978.html">Lobaro_doxygen</a></li><li class="navelem"><a class="el" href="dir_5ca43eafce667870f6d39fb860f79df7.html">src</a></li><li class="navelem"><b>coap_message.h</b></li>
+    <li class="navelem"><a class="el" href="dir_1bf30330f23b435a56c25d767cd8ea7c.html">CoAPSTM32-Interation</a></li><li class="navelem"><a class="el" href="dir_3076aa56358a99db14e0ccd649864700.html">libraries</a></li><li class="navelem"><a class="el" href="dir_7f6f465502135dc2d8e7e68430a90597.html">3rdparty</a></li><li class="navelem"><a class="el" href="dir_9c8da0afa86d199ed898bdeb6e96876e.html">CoAp</a></li><li class="navelem"><a class="el" href="coap__message_8h.html">coap_message.h</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

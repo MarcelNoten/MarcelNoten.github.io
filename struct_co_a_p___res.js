@@ -1,11 +1,11 @@
 var struct_co_a_p___res =
 [
-    [ "Handler", "struct_co_a_p___res.html#aaa7462854e771272ff07933c57807498", null ],
-    [ "next", "struct_co_a_p___res.html#ac442d337df582ca4f0d606a5f11fba82", null ],
-    [ "Notifier", "struct_co_a_p___res.html#a07472f236853ab2767f824d1263114ba", null ],
-    [ "Options", "struct_co_a_p___res.html#af038912b26f665b60ca6672dec327b48", null ],
-    [ "pDescription", "struct_co_a_p___res.html#a8a3f32b852b79aedb1dec2a7b2a5ee32", null ],
-    [ "pListObservers", "struct_co_a_p___res.html#a2511c699f1c650a6d682e82b562fab48", null ],
-    [ "pUri", "struct_co_a_p___res.html#a1eb41a5d85ab4ee5d12204054053697a", null ],
-    [ "UpdateCnt", "struct_co_a_p___res.html#a7f3c197b0a625b20ed296861600f4e2a", null ]
+    [ "Handler", "struct_co_a_p___res.html#a76745d046109b36a2de57d9c4a7e5bcb", null ],
+    [ "next", "struct_co_a_p___res.html#a3a5d16df67fef0a8b3395fcdd8788aa1", null ],
+    [ "Notifier", "struct_co_a_p___res.html#afcf6e66215ec66e27d60e75f8f3016e1", null ],
+    [ "Options", "struct_co_a_p___res.html#ab9161358ffa8da468191789d7293f86d", null ],
+    [ "pDescription", "struct_co_a_p___res.html#ae1067b6aa32e297565eff4c2b2ed469b", null ],
+    [ "pListObservers", "struct_co_a_p___res.html#a4a873406a1d0b78cc25083d990d48c26", null ],
+    [ "pUri", "struct_co_a_p___res.html#a2ab020121e243d21098d48dd876472b5", null ],
+    [ "UpdateCnt", "struct_co_a_p___res.html#aa9b8568feffffe4ee6b60cb8e1e3dc6a", null ]
 ];

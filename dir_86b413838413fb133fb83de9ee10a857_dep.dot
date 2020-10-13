@@ -1,0 +1,16 @@
+digraph "CoAPSTM32-Interation/libraries/3rdparty/CoAp/interface" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_9c8da0afa86d199ed898bdeb6e96876e {
+    graph [ bgcolor="#ddddee", pencolor="black", label="CoAp" fontname="Helvetica", fontsize="10", URL="dir_9c8da0afa86d199ed898bdeb6e96876e.html"]
+  subgraph clusterdir_86b413838413fb133fb83de9ee10a857 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_86b413838413fb133fb83de9ee10a857.html"];
+    dir_86b413838413fb133fb83de9ee10a857 [shape=plaintext label="interface"];
+    dir_cae51f3ad29cf5b3731e5022ded1bce2 [shape=box label="mem" color="black" fillcolor="white" style="filled" URL="dir_cae51f3ad29cf5b3731e5022ded1bce2.html"];
+    dir_dfc5755b417ec6a8977245cd4bb892b9 [shape=box label="network" color="black" fillcolor="white" style="filled" URL="dir_dfc5755b417ec6a8977245cd4bb892b9.html"];
+  }
+  }
+  dir_86b413838413fb133fb83de9ee10a857->dir_cae51f3ad29cf5b3731e5022ded1bce2 [headlabel="1", labeldistance=1.5 headhref="dir_000005_000006.html"];
+  dir_86b413838413fb133fb83de9ee10a857->dir_dfc5755b417ec6a8977245cd4bb892b9 [headlabel="3", labeldistance=1.5 headhref="dir_000005_000007.html"];
+}

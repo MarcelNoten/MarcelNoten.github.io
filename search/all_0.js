@@ -1,15 +1,6 @@
 var searchData=
 [
-  ['coap_5fapi_5ft_0',['CoAP_API_t',['../struct_co_a_p___a_p_i__t.html',1,'']]],
-  ['coap_5fblockwise_5foption_5ft_1',['CoAP_blockwise_option_t',['../struct_co_a_p__blockwise__option__t.html',1,'']]],
-  ['coap_5finteraction_2',['CoAP_Interaction',['../struct_co_a_p___interaction.html',1,'']]],
-  ['coap_5fmessage_5ft_3',['CoAP_Message_t',['../struct_co_a_p___message__t.html',1,'']]],
-  ['coap_5fobserver_4',['CoAP_Observer',['../struct_co_a_p___observer.html',1,'']]],
-  ['coap_5foption_5',['CoAP_option',['../struct_co_a_p__option.html',1,'']]],
-  ['coap_5fres_6',['CoAP_Res',['../struct_co_a_p___res.html',1,'']]],
-  ['coap_5fresopts_5ft_7',['CoAP_ResOpts_t',['../struct_co_a_p___res_opts__t.html',1,'']]],
-  ['coap_5fsocket_5ft_8',['CoAP_Socket_t',['../struct_co_a_p___socket__t.html',1,'']]],
-  ['coap_5fsocketctrl_5ft_9',['CoAP_SocketCtrl_t',['../struct_co_a_p___socket_ctrl__t.html',1,'']]],
-  ['coap_5ft_10',['CoAP_t',['../struct_co_a_p__t.html',1,'']]],
-  ['coap_5ftoken_5ft_11',['CoAP_Token_t',['../struct_co_a_p___token__t.html',1,'']]]
+  ['_5f_0',['_',['../coap__mem_8c.html#af20b8d139279b360b0fdeae71f8f43bc',1,'_():&#160;coap_mem.c'],['../coap__mem_8c.html#ad982ddf69c0718be4fe133fa776da4b5',1,'_((void *buffer, bufsize len)):&#160;coap_mem.c'],['../coap__mem_8c.html#a45a675cbcb951f6fc186e4850d7af9e9',1,'_((bufsize size)):&#160;coap_mem.c'],['../coap__mem_8c.html#a4d4c80abfd4ffcfb77aef30f8777ae55',1,'_((void *buffer, bufsize newsize)):&#160;coap_mem.c'],['../coap__mem_8c.html#afc86af0a0b90834194977679ae42202a',1,'_((void *buf)):&#160;coap_mem.c'],['../coap__mem_8c.html#a4834bad41515ba92d0af3ac546e3e015',1,'_((int(*compact)(bufsize sizereq, int sequence), void *(*acquire)(bufsize size), void(*release)(void *buf), bufsize pool_incr)):&#160;coap_mem.c'],['../coap__mem_8c.html#a699c5b37c25328c8d18fb847310af2e0',1,'_((bufsize *curalloc, bufsize *totfree, bufsize *maxfree, long *nget, long *nrel)):&#160;coap_mem.c'],['../coap__mem_8c.html#a93b2b210ccb75e0ea500b4bbf8c6a007',1,'_((bufsize *pool_incr, long *npool, long *npget, long *nprel, long *ndget, long *ndrel)):&#160;coap_mem.c'],['../coap__mem_8c.html#ab8e5666da9d402153c1d4f0a7173d8e7',1,'_((void *pool, int dumpalloc, int dumpfree)):&#160;coap_mem.c'],['../coap__mem_8c.html#a02a8ade2b7a153129e1ac6a7db1678e3',1,'_((void *pool)):&#160;coap_mem.c']]],
+  ['_5fram_1',['_ram',['../coap__interface_8h.html#afde8c43c07a37fca2b061aaa7e6bf2c9',1,'coap_interface.h']]],
+  ['_5from_2',['_rom',['../coap__interface_8h.html#ac5a3150e28aacab67c7b836fc64bf759',1,'coap_interface.h']]]
 ];

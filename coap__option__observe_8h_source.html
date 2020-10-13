@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lobaro Coap library: C:/Users/MarcelNotenboom/Desktop/Lobaro_doxygen/src/option-types/coap_option_observe.h Source File</title>
+<title>Lobaro Coap library: CoAPSTM32-Interation/libraries/3rdparty/CoAp/option-types/coap_option_observe.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -16,11 +16,6 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(function() { init_search(); });
-/* @license-end */
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -31,23 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Lobaro Coap library
+   &#160;<span id="projectnumber">12-10-2020</span>
    </div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.svg"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Search" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -59,6 +40,16 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -95,51 +86,40 @@ $(document).ready(function(){initNavTree('coap__option__observe_8h_source.html',
 <div class="title">coap_option_observe.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*******************************************************************************</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Copyright (c)  2015  Dipl.-Ing. Tobias Rohde, http://www.lobaro.com</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * in the Software without restriction, including without limitation the rights</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * copies of the Software, and to permit persons to whom the Software is</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * furnished to do so, subject to the following conditions:</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * The above copyright notice and this permission notice shall be included in</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * all copies or substantial portions of the Software.</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * THE SOFTWARE.</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *******************************************************************************/</span></div>
+<a href="coap__option__observe_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifndef COAP_OBSERVE_OPTION</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define COAP_OBSERVE_OPTION</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define OBSERVE_OPT_REGISTER (0)</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define OBSERVE_OPT_DEREGISTER (1)</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="coap__option__observe_8h.html#a8fac346d68ffac5828e978d370537f42">   25</a></span>&#160;<span class="preprocessor">#define OBSERVE_OPT_REGISTER (0)</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="coap__option__observe_8h.html#a2bfc974791ddd2d02bf922ffed2140b5">   26</a></span>&#160;<span class="preprocessor">#define OBSERVE_OPT_DEREGISTER (1)</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;CoAP_Result_t AddObserveOptionToMsg(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a> *msg, uint32_t val);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;CoAP_Result_t GetObserveOptionFromMsg(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a> *msg, uint32_t *val);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;CoAP_Result_t RemoveObserveOptionFromMsg(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a> *msg);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;CoAP_Result_t UpdateObserveOptionInMsg(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a> *msg, uint32_t val);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="code" href="struct_co_a_p___observer.html">CoAP_Observer_t</a> *CoAP_AllocNewObserver();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;CoAP_Result_t CoAP_FreeObserver(<a class="code" href="struct_co_a_p___observer.html">CoAP_Observer_t</a> **pObserver);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;CoAP_Result_t CoAP_AppendObserverToList(<a class="code" href="struct_co_a_p___observer.html">CoAP_Observer_t</a> **pListStart, <a class="code" href="struct_co_a_p___observer.html">CoAP_Observer_t</a> *pObserverToAdd);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;CoAP_Result_t CoAP_UnlinkObserverFromList(<a class="code" href="struct_co_a_p___observer.html">CoAP_Observer_t</a> **pListStart, <a class="code" href="struct_co_a_p___observer.html">CoAP_Observer_t</a> *pObserverToRemove, <span class="keywordtype">bool</span> FreeUnlinked);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a> <a class="code" href="coap__option__observe_8h.html#a6e041256462713b45146906fddbc17b9">AddObserveOptionToMsg</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a> *msg, uint32_t val);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<a class="code" href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a> <a class="code" href="coap__option__observe_8h.html#a3fa62ab72cd2a690c33a18a9584ed4eb">GetObserveOptionFromMsg</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a> *msg, uint32_t *val);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a> <a class="code" href="coap__option__observe_8h.html#acb10bf04e28891e06845479499c51555">RemoveObserveOptionFromMsg</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a> *msg);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<a class="code" href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a> <a class="code" href="coap__option__observe_8h.html#a3f7b7f66b331f6476825be6afb55d50d">UpdateObserveOptionInMsg</a>(<a class="code" href="struct_co_a_p___message__t.html">CoAP_Message_t</a> *msg, uint32_t val);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="code" href="struct_co_a_p___observer.html">CoAP_Observer_t</a> *<a class="code" href="coap__option__observe_8h.html#a426d332284efa7c9883a45c1bfd9fcc6">CoAP_AllocNewObserver</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a> <a class="code" href="coap__option__observe_8h.html#a60661b44fdb5f7a5c85423a2afc26d8f">CoAP_FreeObserver</a>(<a class="code" href="struct_co_a_p___observer.html">CoAP_Observer_t</a> **pObserver);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a> <a class="code" href="coap__option__observe_8h.html#a571c1437f8a828e065ba93ddd1c075de">CoAP_AppendObserverToList</a>(<a class="code" href="struct_co_a_p___observer.html">CoAP_Observer_t</a> **pListStart, <a class="code" href="struct_co_a_p___observer.html">CoAP_Observer_t</a> *pObserverToAdd);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a> <a class="code" href="coap__option__observe_8h.html#a17474882566fd86fab97502f1747e46f">CoAP_UnlinkObserverFromList</a>(<a class="code" href="struct_co_a_p___observer.html">CoAP_Observer_t</a> **pListStart, <a class="code" href="struct_co_a_p___observer.html">CoAP_Observer_t</a> *pObserverToRemove, <span class="keywordtype">bool</span> FreeUnlinked);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="astruct_co_a_p___observer_html"><div class="ttname"><a href="struct_co_a_p___observer.html">CoAP_Observer</a></div><div class="ttdef"><b>Definition:</b> liblobaro_coap.h:270</div></div>
-<div class="ttc" id="astruct_co_a_p___message__t_html"><div class="ttname"><a href="struct_co_a_p___message__t.html">CoAP_Message_t</a></div><div class="ttdef"><b>Definition:</b> liblobaro_coap.h:250</div></div>
+<div class="ttc" id="acoap__option__observe_8h_html_a426d332284efa7c9883a45c1bfd9fcc6"><div class="ttname"><a href="coap__option__observe_8h.html#a426d332284efa7c9883a45c1bfd9fcc6">CoAP_AllocNewObserver</a></div><div class="ttdeci">CoAP_Observer_t * CoAP_AllocNewObserver()</div><div class="ttdef"><b>Definition:</b> coap_option_observe.c:95</div></div>
+<div class="ttc" id="acoap__option__observe_8h_html_a60661b44fdb5f7a5c85423a2afc26d8f"><div class="ttname"><a href="coap__option__observe_8h.html#a60661b44fdb5f7a5c85423a2afc26d8f">CoAP_FreeObserver</a></div><div class="ttdeci">CoAP_Result_t CoAP_FreeObserver(CoAP_Observer_t **pObserver)</div><div class="ttdef"><b>Definition:</b> coap_option_observe.c:106</div></div>
+<div class="ttc" id="acoap__option__observe_8h_html_a571c1437f8a828e065ba93ddd1c075de"><div class="ttname"><a href="coap__option__observe_8h.html#a571c1437f8a828e065ba93ddd1c075de">CoAP_AppendObserverToList</a></div><div class="ttdeci">CoAP_Result_t CoAP_AppendObserverToList(CoAP_Observer_t **pListStart, CoAP_Observer_t *pObserverToAdd)</div><div class="ttdef"><b>Definition:</b> coap_option_observe.c:119</div></div>
+<div class="ttc" id="acoap__option__observe_8h_html_a3f7b7f66b331f6476825be6afb55d50d"><div class="ttname"><a href="coap__option__observe_8h.html#a3f7b7f66b331f6476825be6afb55d50d">UpdateObserveOptionInMsg</a></div><div class="ttdeci">CoAP_Result_t UpdateObserveOptionInMsg(CoAP_Message_t *msg, uint32_t val)</div><div class="ttdef"><b>Definition:</b> coap_option_observe.c:60</div></div>
+<div class="ttc" id="astruct_co_a_p___observer_html"><div class="ttname"><a href="struct_co_a_p___observer.html">CoAP_Observer</a></div><div class="ttdoc">Coap Observer.</div><div class="ttdef"><b>Definition:</b> liblobaro_coap.h:374</div></div>
+<div class="ttc" id="acoap__option__observe_8h_html_a6e041256462713b45146906fddbc17b9"><div class="ttname"><a href="coap__option__observe_8h.html#a6e041256462713b45146906fddbc17b9">AddObserveOptionToMsg</a></div><div class="ttdeci">CoAP_Result_t AddObserveOptionToMsg(CoAP_Message_t *msg, uint32_t val)</div><div class="ttdoc">Copyright (c) 2015 Dipl.</div><div class="ttdef"><b>Definition:</b> coap_option_observe.c:25</div></div>
+<div class="ttc" id="aliblobaro__coap_8h_html_a243112826e1395fb46ae2e1da1baca83"><div class="ttname"><a href="liblobaro__coap_8h.html#a243112826e1395fb46ae2e1da1baca83">CoAP_Result_t</a></div><div class="ttdeci">CoAP_Result_t</div><div class="ttdoc">Result codes for coap actions.</div><div class="ttdef"><b>Definition:</b> liblobaro_coap.h:41</div></div>
+<div class="ttc" id="acoap__option__observe_8h_html_a17474882566fd86fab97502f1747e46f"><div class="ttname"><a href="coap__option__observe_8h.html#a17474882566fd86fab97502f1747e46f">CoAP_UnlinkObserverFromList</a></div><div class="ttdeci">CoAP_Result_t CoAP_UnlinkObserverFromList(CoAP_Observer_t **pListStart, CoAP_Observer_t *pObserverToRemove, bool FreeUnlinked)</div><div class="ttdef"><b>Definition:</b> coap_option_observe.c:143</div></div>
+<div class="ttc" id="acoap__option__observe_8h_html_a3fa62ab72cd2a690c33a18a9584ed4eb"><div class="ttname"><a href="coap__option__observe_8h.html#a3fa62ab72cd2a690c33a18a9584ed4eb">GetObserveOptionFromMsg</a></div><div class="ttdeci">CoAP_Result_t GetObserveOptionFromMsg(CoAP_Message_t *msg, uint32_t *val)</div><div class="ttdef"><b>Definition:</b> coap_option_observe.c:66</div></div>
+<div class="ttc" id="acoap__option__observe_8h_html_acb10bf04e28891e06845479499c51555"><div class="ttname"><a href="coap__option__observe_8h.html#acb10bf04e28891e06845479499c51555">RemoveObserveOptionFromMsg</a></div><div class="ttdeci">CoAP_Result_t RemoveObserveOptionFromMsg(CoAP_Message_t *msg)</div><div class="ttdef"><b>Definition:</b> coap_option_observe.c:49</div></div>
+<div class="ttc" id="astruct_co_a_p___message__t_html"><div class="ttname"><a href="struct_co_a_p___message__t.html">CoAP_Message_t</a></div><div class="ttdoc">Coap message.</div><div class="ttdef"><b>Definition:</b> liblobaro_coap.h:351</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_316d6101d431efdd778ad14d21f8ad87.html">MarcelNotenboom</a></li><li class="navelem"><a class="el" href="dir_4c7f952422c2a6aecdbb987f1735c77d.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_3e1dc777a41a29db4831ce2a8fdea978.html">Lobaro_doxygen</a></li><li class="navelem"><a class="el" href="dir_5ca43eafce667870f6d39fb860f79df7.html">src</a></li><li class="navelem"><a class="el" href="dir_002a5bed383a9fa0aa247860d8468a92.html">option-types</a></li><li class="navelem"><b>coap_option_observe.h</b></li>
+    <li class="navelem"><a class="el" href="dir_1bf30330f23b435a56c25d767cd8ea7c.html">CoAPSTM32-Interation</a></li><li class="navelem"><a class="el" href="dir_3076aa56358a99db14e0ccd649864700.html">libraries</a></li><li class="navelem"><a class="el" href="dir_7f6f465502135dc2d8e7e68430a90597.html">3rdparty</a></li><li class="navelem"><a class="el" href="dir_9c8da0afa86d199ed898bdeb6e96876e.html">CoAp</a></li><li class="navelem"><a class="el" href="dir_9f0ebe11dc80c296283f88d19c0403e6.html">option-types</a></li><li class="navelem"><a class="el" href="coap__option__observe_8h.html">coap_option_observe.h</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

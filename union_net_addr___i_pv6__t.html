@@ -16,11 +16,6 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(function() { init_search(); });
-/* @license-end */
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -31,23 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Lobaro Coap library
+   &#160;<span id="projectnumber">12-10-2020</span>
    </div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.svg"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Search" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -59,6 +40,16 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -97,21 +88,77 @@ $(document).ready(function(){initNavTree('union_net_addr___i_pv6__t.html',''); i
 <div class="title">NetAddr_IPv6_t Union Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>IPv6 address.  
+ <a href="union_net_addr___i_pv6__t.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="liblobaro__coap_8h_source.html">liblobaro_coap.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a7d20a92b69d1c84b8006b6e5c3221665"><td class="memItemLeft" align="right" valign="top"><a id="a7d20a92b69d1c84b8006b6e5c3221665"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>u8</b> [16]</td></tr>
-<tr class="separator:a7d20a92b69d1c84b8006b6e5c3221665"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0326ee35090af6def77a4238f65a21f9"><td class="memItemLeft" align="right" valign="top"><a id="a0326ee35090af6def77a4238f65a21f9"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>u16</b> [8]</td></tr>
-<tr class="separator:a0326ee35090af6def77a4238f65a21f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f8c138f933626d10abdd878811f55b8"><td class="memItemLeft" align="right" valign="top"><a id="a4f8c138f933626d10abdd878811f55b8"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>u32</b> [4]</td></tr>
-<tr class="separator:a4f8c138f933626d10abdd878811f55b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34612a004ca832ac0ecc01262a13c9a2"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_net_addr___i_pv6__t.html#a34612a004ca832ac0ecc01262a13c9a2">u8</a> [16]</td></tr>
+<tr class="separator:a34612a004ca832ac0ecc01262a13c9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34a9e5445ee3426d81408b9e612043a1"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_net_addr___i_pv6__t.html#a34a9e5445ee3426d81408b9e612043a1">u16</a> [8]</td></tr>
+<tr class="separator:a34a9e5445ee3426d81408b9e612043a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a921c2931e7d9eb94306bb01cdd855000"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="union_net_addr___i_pv6__t.html#a921c2931e7d9eb94306bb01cdd855000">u32</a> [4]</td></tr>
+<tr class="separator:a921c2931e7d9eb94306bb01cdd855000"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>IPv6 address. </p>
+<p>Union data type for the IPv6 address.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uint8_t</td><td>8 bit integer for the network addres </td></tr>
+    <tr><td class="paramname">uint16_t</td><td>16 bit integer for the network addres </td></tr>
+    <tr><td class="paramname">uint32_t</td><td>32 bit integer for the network addres </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="a34a9e5445ee3426d81408b9e612043a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34a9e5445ee3426d81408b9e612043a1">&#9670;&nbsp;</a></span>u16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t u16[8]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a921c2931e7d9eb94306bb01cdd855000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a921c2931e7d9eb94306bb01cdd855000">&#9670;&nbsp;</a></span>u32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t u32[4]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34612a004ca832ac0ecc01262a13c9a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34612a004ca832ac0ecc01262a13c9a2">&#9670;&nbsp;</a></span>u8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t u8[16]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this union was generated from the following file:<ul>
-<li>C:/Users/MarcelNotenboom/Desktop/Lobaro_doxygen/src/<a class="el" href="liblobaro__coap_8h_source.html">liblobaro_coap.h</a></li>
+<li>CoAPSTM32-Interation/libraries/3rdparty/CoAp/<a class="el" href="liblobaro__coap_8h_source.html">liblobaro_coap.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

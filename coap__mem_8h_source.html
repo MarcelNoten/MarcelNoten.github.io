@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Lobaro Coap library: C:/Users/MarcelNotenboom/Desktop/Lobaro_doxygen/src/coap_mem.h Source File</title>
+<title>Lobaro Coap library: CoAPSTM32-Interation/libraries/3rdparty/CoAp/interface/mem/coap_mem.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -16,11 +16,6 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(function() { init_search(); });
-/* @license-end */
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -31,23 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Lobaro Coap library
+   &#160;<span id="projectnumber">12-10-2020</span>
    </div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.svg"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Search" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -59,6 +40,16 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -95,22 +86,40 @@ $(document).ready(function(){initNavTree('coap__mem_8h_source.html',''); initRes
 <div class="title">coap_mem.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SRC_COAP_COAP_MEM_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SRC_COAP_COAP_MEM_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">void</span> *CoAP_malloc(<span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keywordtype">void</span> *CoAP_malloc0(<span class="keywordtype">size_t</span> size);</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keywordtype">void</span> CoAP_free(<span class="keywordtype">void</span> *a);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#endif</span></div>
+<a href="coap__mem_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//Taken from http://www.fourmilab.ch/bget/</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//&quot;BGET is in the public domain. You can do anything you like with it.&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//Thank you Mr. Walker for your great work!</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;../coap_interface.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifndef __COAP_MEM__</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define __COAP_MEM__</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="coap__mem_8h.html#aa3ce70df87e507d330551bc98c1afe59">coap_mem_init</a>(uint8_t* pMemoryArea, int16_t size);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="coap__mem_8h.html#a1d47e8a2a54c448adfa21d5c447ac787">coap_mem_release</a>(<span class="keywordtype">void</span>* buf);       <span class="comment">//release memory</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span>* <a class="code" href="coap__mem_8h.html#aab6bdcc6ede5d62f3ace3929e035dd66">coap_mem_get</a>(int16_t size);       <span class="comment">//request memory (4 byte header + alignment = overhead of allocator)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span>* <a class="code" href="coap__mem_8h.html#a71413baeeeea7e13a23f4449316d6f01">coap_mem_get0</a>(int16_t size);      <span class="comment">//get zero initialized buf mem</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    int32_t <a class="code" href="coap__mem_8h.html#aeb82d12055552253eb9009ea5a312b47">coap_mem_size</a>(uint8_t* buf);    <span class="comment">//get size of user buffer without memory allocator header</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    uint8_t* <a class="code" href="coap__mem_8h.html#a0e46f139d2ddbe779996c5c910bb9a33">coap_mem_buf_lowEnd</a>();         <span class="comment">//lowEnd of total memory area under control of memory allocator</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    uint8_t* <a class="code" href="coap__mem_8h.html#af3fa28444471b5095625c0d62f886078">coap_mem_buf_highEnd</a>();        <span class="comment">//highEnd of total memory area under control of memory allocator</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="coap__mem_8h.html#add776621f0c1fb1340adae31b8ac25e4">coap_mem_stats</a>();                  <span class="comment">//Display/Print some debug information for amount of memory usage</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">    #endif</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="acoap__mem_8h_html_a71413baeeeea7e13a23f4449316d6f01"><div class="ttname"><a href="coap__mem_8h.html#a71413baeeeea7e13a23f4449316d6f01">coap_mem_get0</a></div><div class="ttdeci">void * coap_mem_get0(int16_t size)</div><div class="ttdef"><b>Definition:</b> coap_mem.c:89</div></div>
+<div class="ttc" id="acoap__mem_8h_html_af3fa28444471b5095625c0d62f886078"><div class="ttname"><a href="coap__mem_8h.html#af3fa28444471b5095625c0d62f886078">coap_mem_buf_highEnd</a></div><div class="ttdeci">uint8_t * coap_mem_buf_highEnd()</div><div class="ttdef"><b>Definition:</b> coap_mem.c:69</div></div>
+<div class="ttc" id="acoap__mem_8h_html_add776621f0c1fb1340adae31b8ac25e4"><div class="ttname"><a href="coap__mem_8h.html#add776621f0c1fb1340adae31b8ac25e4">coap_mem_stats</a></div><div class="ttdeci">void coap_mem_stats()</div><div class="ttdef"><b>Definition:</b> coap_mem.c:102</div></div>
+<div class="ttc" id="acoap__mem_8h_html_a0e46f139d2ddbe779996c5c910bb9a33"><div class="ttname"><a href="coap__mem_8h.html#a0e46f139d2ddbe779996c5c910bb9a33">coap_mem_buf_lowEnd</a></div><div class="ttdeci">uint8_t * coap_mem_buf_lowEnd()</div><div class="ttdef"><b>Definition:</b> coap_mem.c:65</div></div>
+<div class="ttc" id="acoap__mem_8h_html_a1d47e8a2a54c448adfa21d5c447ac787"><div class="ttname"><a href="coap__mem_8h.html#a1d47e8a2a54c448adfa21d5c447ac787">coap_mem_release</a></div><div class="ttdeci">void coap_mem_release(void *buf)</div><div class="ttdef"><b>Definition:</b> coap_mem.c:94</div></div>
+<div class="ttc" id="acoap__mem_8h_html_aeb82d12055552253eb9009ea5a312b47"><div class="ttname"><a href="coap__mem_8h.html#aeb82d12055552253eb9009ea5a312b47">coap_mem_size</a></div><div class="ttdeci">int32_t coap_mem_size(uint8_t *buf)</div><div class="ttdef"><b>Definition:</b> coap_mem.c:664</div></div>
+<div class="ttc" id="acoap__mem_8h_html_aab6bdcc6ede5d62f3ace3929e035dd66"><div class="ttname"><a href="coap__mem_8h.html#aab6bdcc6ede5d62f3ace3929e035dd66">coap_mem_get</a></div><div class="ttdeci">void * coap_mem_get(int16_t size)</div><div class="ttdef"><b>Definition:</b> coap_mem.c:83</div></div>
+<div class="ttc" id="acoap__mem_8h_html_aa3ce70df87e507d330551bc98c1afe59"><div class="ttname"><a href="coap__mem_8h.html#aa3ce70df87e507d330551bc98c1afe59">coap_mem_init</a></div><div class="ttdeci">void coap_mem_init(uint8_t *pMemoryArea, int16_t size)</div><div class="ttdoc">Copyright (c) 2015 Dipl.</div><div class="ttdef"><b>Definition:</b> coap_mem.c:73</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_316d6101d431efdd778ad14d21f8ad87.html">MarcelNotenboom</a></li><li class="navelem"><a class="el" href="dir_4c7f952422c2a6aecdbb987f1735c77d.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_3e1dc777a41a29db4831ce2a8fdea978.html">Lobaro_doxygen</a></li><li class="navelem"><a class="el" href="dir_5ca43eafce667870f6d39fb860f79df7.html">src</a></li><li class="navelem"><b>coap_mem.h</b></li>
+    <li class="navelem"><a class="el" href="dir_1bf30330f23b435a56c25d767cd8ea7c.html">CoAPSTM32-Interation</a></li><li class="navelem"><a class="el" href="dir_3076aa56358a99db14e0ccd649864700.html">libraries</a></li><li class="navelem"><a class="el" href="dir_7f6f465502135dc2d8e7e68430a90597.html">3rdparty</a></li><li class="navelem"><a class="el" href="dir_9c8da0afa86d199ed898bdeb6e96876e.html">CoAp</a></li><li class="navelem"><a class="el" href="dir_86b413838413fb133fb83de9ee10a857.html">interface</a></li><li class="navelem"><a class="el" href="dir_cae51f3ad29cf5b3731e5022ded1bce2.html">mem</a></li><li class="navelem"><a class="el" href="coap__mem_8h.html">coap_mem.h</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

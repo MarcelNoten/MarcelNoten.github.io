@@ -16,11 +16,6 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
-<script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-  $(document).ready(function() { init_search(); });
-/* @license-end */
-</script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -31,23 +26,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Lobaro Coap library
+   &#160;<span id="projectnumber">12-10-2020</span>
    </div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
-        <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.svg"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Search" accesskey="S"
-               onfocus="searchBox.OnSearchFieldFocus(true)" 
-               onblur="searchBox.OnSearchFieldFocus(false)" 
-               onkeyup="searchBox.OnSearchFieldChange(event)"/>
-          </span><span class="right">
-            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
-          </span>
-        </div>
-</td>
  </tr>
  </tbody>
 </table>
@@ -59,6 +40,16 @@
 var searchBox = new SearchBox("searchBox", "search",false,'Search');
 /* @license-end */
 </script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -97,6 +88,11 @@ $(document).ready(function(){initNavTree('struct_co_a_p___observer.html',''); in
 <div class="title">CoAP_Observer Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Coap Observer.  
+ <a href="struct_co_a_p___observer.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="liblobaro__coap_8h_source.html">liblobaro_coap.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for CoAP_Observer:</div>
 <div class="dyncontent">
@@ -105,27 +101,127 @@ Collaboration diagram for CoAP_Observer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a6e0c324887af9b4375bd18763e6437b2"><td class="memItemLeft" align="right" valign="top"><a id="a6e0c324887af9b4375bd18763e6437b2"></a>
-<a class="el" href="struct_net_ep__t.html">NetEp_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Ep</b></td></tr>
-<tr class="separator:a6e0c324887af9b4375bd18763e6437b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c3dc721b1dda75523e1051d221d262d"><td class="memItemLeft" align="right" valign="top"><a id="a4c3dc721b1dda75523e1051d221d262d"></a>
-SocketHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>socketHandle</b></td></tr>
-<tr class="separator:a4c3dc721b1dda75523e1051d221d262d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dcba29e29a830073b8ab9111e51658b"><td class="memItemLeft" align="right" valign="top"><a id="a1dcba29e29a830073b8ab9111e51658b"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>FailCount</b></td></tr>
-<tr class="separator:a1dcba29e29a830073b8ab9111e51658b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43c32c1b870c419dafd71882769b10de"><td class="memItemLeft" align="right" valign="top"><a id="a43c32c1b870c419dafd71882769b10de"></a>
-<a class="el" href="struct_co_a_p___token__t.html">CoAP_Token_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Token</b></td></tr>
-<tr class="separator:a43c32c1b870c419dafd71882769b10de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a572cd4d93d937063310859d48a4514f8"><td class="memItemLeft" align="right" valign="top"><a id="a572cd4d93d937063310859d48a4514f8"></a>
-<a class="el" href="struct_co_a_p__option.html">CoAP_option_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pOptList</b></td></tr>
-<tr class="separator:a572cd4d93d937063310859d48a4514f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a015d3305dea14661aca613173d851258"><td class="memItemLeft" align="right" valign="top"><a id="a015d3305dea14661aca613173d851258"></a>
-struct <a class="el" href="struct_co_a_p___observer.html">CoAP_Observer</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>next</b></td></tr>
-<tr class="separator:a015d3305dea14661aca613173d851258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67727b7a48013ebff13618c43993c3da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_net_ep__t.html">NetEp_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_co_a_p___observer.html#a67727b7a48013ebff13618c43993c3da">Ep</a></td></tr>
+<tr class="memdesc:a67727b7a48013ebff13618c43993c3da"><td class="mdescLeft">&#160;</td><td class="mdescRight">[16B]  <a href="struct_co_a_p___observer.html#a67727b7a48013ebff13618c43993c3da">More...</a><br /></td></tr>
+<tr class="separator:a67727b7a48013ebff13618c43993c3da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bb44000e417fd7705cf5a4bebf14f2d"><td class="memItemLeft" align="right" valign="top">Socket_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_co_a_p___observer.html#a5bb44000e417fd7705cf5a4bebf14f2d">socketHandle</a></td></tr>
+<tr class="memdesc:a5bb44000e417fd7705cf5a4bebf14f2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">[4B]  <a href="struct_co_a_p___observer.html#a5bb44000e417fd7705cf5a4bebf14f2d">More...</a><br /></td></tr>
+<tr class="separator:a5bb44000e417fd7705cf5a4bebf14f2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af586f1c2e56eb39b822f5ff4ba275b0c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_co_a_p___observer.html#af586f1c2e56eb39b822f5ff4ba275b0c">FailCount</a></td></tr>
+<tr class="memdesc:af586f1c2e56eb39b822f5ff4ba275b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">[1B]  <a href="struct_co_a_p___observer.html#af586f1c2e56eb39b822f5ff4ba275b0c">More...</a><br /></td></tr>
+<tr class="separator:af586f1c2e56eb39b822f5ff4ba275b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e0d00e20bc3577e42594648a70c9390"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_co_a_p___token__t.html">CoAP_Token_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_co_a_p___observer.html#a8e0d00e20bc3577e42594648a70c9390">Token</a></td></tr>
+<tr class="memdesc:a8e0d00e20bc3577e42594648a70c9390"><td class="mdescLeft">&#160;</td><td class="mdescRight">[9B]  <a href="struct_co_a_p___observer.html#a8e0d00e20bc3577e42594648a70c9390">More...</a><br /></td></tr>
+<tr class="separator:a8e0d00e20bc3577e42594648a70c9390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec38cfaaabfc93c862f42f45518f3b03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="liblobaro__coap_8h.html#a4057822fed4d870f772c2c818c50f253">CoAP_option_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_co_a_p___observer.html#aec38cfaaabfc93c862f42f45518f3b03">pOptList</a></td></tr>
+<tr class="memdesc:aec38cfaaabfc93c862f42f45518f3b03"><td class="mdescLeft">&#160;</td><td class="mdescRight">[xxB](uri-host) &lt;- will be removed if attached, uri-query, observe (for seq number)  <a href="struct_co_a_p___observer.html#aec38cfaaabfc93c862f42f45518f3b03">More...</a><br /></td></tr>
+<tr class="separator:aec38cfaaabfc93c862f42f45518f3b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace59e1a06477d927983cfd74184dcaaa"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_co_a_p___observer.html">CoAP_Observer</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_co_a_p___observer.html#ace59e1a06477d927983cfd74184dcaaa">next</a></td></tr>
+<tr class="memdesc:ace59e1a06477d927983cfd74184dcaaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">[4B] pointer (linked list) (not saved while sleeping)  <a href="struct_co_a_p___observer.html#ace59e1a06477d927983cfd74184dcaaa">More...</a><br /></td></tr>
+<tr class="separator:ace59e1a06477d927983cfd74184dcaaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Coap Observer. </p>
+<p>Linked list for observers. </p>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="a67727b7a48013ebff13618c43993c3da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67727b7a48013ebff13618c43993c3da">&#9670;&nbsp;</a></span>Ep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_net_ep__t.html">NetEp_t</a> Ep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[16B] </p>
+
+</div>
+</div>
+<a id="af586f1c2e56eb39b822f5ff4ba275b0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af586f1c2e56eb39b822f5ff4ba275b0c">&#9670;&nbsp;</a></span>FailCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t FailCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[1B] </p>
+
+</div>
+</div>
+<a id="ace59e1a06477d927983cfd74184dcaaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace59e1a06477d927983cfd74184dcaaa">&#9670;&nbsp;</a></span>next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_co_a_p___observer.html">CoAP_Observer</a>* next</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[4B] pointer (linked list) (not saved while sleeping) </p>
+
+</div>
+</div>
+<a id="aec38cfaaabfc93c862f42f45518f3b03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec38cfaaabfc93c862f42f45518f3b03">&#9670;&nbsp;</a></span>pOptList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="liblobaro__coap_8h.html#a4057822fed4d870f772c2c818c50f253">CoAP_option_t</a>* pOptList</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[xxB](uri-host) &lt;- will be removed if attached, uri-query, observe (for seq number) </p>
+
+</div>
+</div>
+<a id="a5bb44000e417fd7705cf5a4bebf14f2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bb44000e417fd7705cf5a4bebf14f2d">&#9670;&nbsp;</a></span>socketHandle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Socket_t socketHandle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[4B] </p>
+
+</div>
+</div>
+<a id="a8e0d00e20bc3577e42594648a70c9390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e0d00e20bc3577e42594648a70c9390">&#9670;&nbsp;</a></span>Token</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_co_a_p___token__t.html">CoAP_Token_t</a> Token</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>[9B] </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/MarcelNotenboom/Desktop/Lobaro_doxygen/src/<a class="el" href="liblobaro__coap_8h_source.html">liblobaro_coap.h</a></li>
+<li>CoAPSTM32-Interation/libraries/3rdparty/CoAp/<a class="el" href="liblobaro__coap_8h_source.html">liblobaro_coap.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

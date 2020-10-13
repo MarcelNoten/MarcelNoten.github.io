@@ -1,0 +1,13 @@
+digraph "CoAPSTM32-Interation/libraries/3rdparty" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_3076aa56358a99db14e0ccd649864700 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="libraries" fontname="Helvetica", fontsize="10", URL="dir_3076aa56358a99db14e0ccd649864700.html"]
+  subgraph clusterdir_7f6f465502135dc2d8e7e68430a90597 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_7f6f465502135dc2d8e7e68430a90597.html"];
+    dir_7f6f465502135dc2d8e7e68430a90597 [shape=plaintext label="3rdparty"];
+    dir_9c8da0afa86d199ed898bdeb6e96876e [shape=box label="CoAp" color="red" fillcolor="white" style="filled" URL="dir_9c8da0afa86d199ed898bdeb6e96876e.html"];
+  }
+  }
+}
